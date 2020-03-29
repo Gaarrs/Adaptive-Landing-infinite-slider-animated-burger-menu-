@@ -1,0 +1,309 @@
+@import vars
+@import fonts
+@import libs
+
+
+
+::placeholder
+	color: #a1a1a1
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	color: $text
+
+.row
+	margin: 0px
+
+a
+	&:hover
+		text-decoration: none
+
+h1
+	font-size: 3em
+
+.header
+	min-height: 50px
+	background-color: $accent
+
+.header__logo
+	font-family: 'pacificoregular', serif
+	color: #fff
+	font-size: 2em
+	text-align: center
+
+.header__socials
+	text-align: center
+
+.socials__item
+	img
+		width: 30px
+		height: auto
+
+.menu
+	img
+		width: 35px
+		height: auto
+		margin-left: -3px
+	@media screen and ( min-width: 426px  )
+		display: none
+
+.header__nav
+	display: flex
+	overflow: hidden
+	transition: all 1s ease 0s
+	@media screen and ( max-width: 425px )
+		height: 0px
+		flex-direction: column
+		align-items: center
+
+.active
+	height: 250px
+
+.nav__item
+	display: flex
+	margin: 10px 10px
+	padding: 0px 5px
+	color: #fff
+	border: 2px solid #fff
+	border-radius: 10px
+	text-align: center
+	align-items: center
+	&:hover
+		color: #fff
+
+.info
+	min-height: 500px
+	background-color: #19120A
+	background-image: url('../img/aboutBg1.jpg')
+	background-repeat: no-repeat
+	background-position-y: 20%
+	background-position-x: -450px
+	@media screen and ( max-width:  425px)
+		background-image: none
+		
+
+.info__content
+	font-family: 'Pacifico', cursive
+	text-align: center
+	color: #C3FFC1
+	padding: 0px 5%
+
+.about
+	min-height: 600px
+
+.about__content
+	text-align: center
+
+.title
+	margin-bottom: 20px
+	font-family: 'pacificoregular', cursive
+
+.about__title
+	color:#000
+
+.option__title
+	color: #fff
+
+.about__img
+	margin-bottom: 20px
+	img
+		max-width: 250px
+		max-height: 250px
+.about__text
+	padding: 0px 5%
+
+.options
+	background-color: $accent
+	min-height: 700px
+	padding: 30px 10px
+
+.options__content
+	max-width: 1000px
+	text-align: center
+
+.options__item
+	background-color: #fff
+	border-radius: 30px
+	padding: 20px 0px
+	margin-bottom: 30px
+
+.options__img
+	order: 1
+	padding: 0px
+	max-width: 250px
+	max-height: 250px
+	border: 2px solid $accent
+	overflow: hidden
+	object-fit: cover
+	img
+		width: 250px
+		height: 250px
+		object-fit: cover
+	@media screen and ( max-width:  425px)
+		margin: 20px 0px
+.options__info
+	order: 2
+
+.options__title
+	color: $accent
+
+.info-right
+	text-align: end
+	@media screen and ( max-width:  425px)
+		text-align: center
+
+.options__info_left
+	text-align: start
+	@media screen and ( max-width:  425px)
+		text-align: center
+
+.options__img_left
+	order: 3
+	@media screen and ( max-width:  425px)
+		order: 1
+
+.examples
+	min-height: 500px
+	padding: 30px 0px 60px 0px
+
+.examples__title
+	color: $accent
+
+.examples__menu
+	min-height: 500px
+	display: flex
+	align-items: center
+
+.examples__content
+	display: flex
+	flex-direction: column
+	justify-content: center
+	max-width: 700px
+	padding: 0px
+	text-align: center
+	
+
+.arrow
+	display: flex
+	align-items: center
+	justify-content: center
+	@media screen and ( max-width: 425px )
+		position: absolute
+	img
+		max-height: 50px
+		cursor: pointer
+
+.examples__item
+	display: flex
+	justify-content: center
+	width: 100%
+	min-width: 250px
+	min-height: 250px
+	padding: 0px
+	img
+		max-height: 400px
+		max-width: 400px
+		border: 2px solid $accent
+		border-radius: 5px
+		@media screen and ( max-width: 425px )
+			max-width: 100%
+
+.left-button
+	padding: 0px
+	max-width: 10%
+	z-index: 5
+	@media screen and ( max-width: 425px )
+			left: 2%
+			bottom: 33%
+			opacity: .3
+	@media screen and ( max-width: 320px )
+			bottom: 25%
+
+.right-button
+	padding: 0px
+	max-width: 10%
+	@media screen and ( max-width: 425px )
+			right: 3%
+			bottom: 33%
+			opacity: .3
+	@media screen and ( max-width: 320px )
+			bottom: 25%
+			
+.cert
+	background-color: $accent
+	text-align: center
+	padding: 30px 0px 60px 0px
+
+.cert__title
+	color:#fff
+
+.cert__item
+	img
+		max-width: 80%
+
+.sign-up
+	padding: 30px 0px 60px 0px
+	background-image: url('../img/flower4.jpg')
+	background-size: cover
+
+.sign-up__content
+	text-align: center
+
+.sign-up__form
+	background-color: $accent
+	border-radius: 20px
+	box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+	padding: 10px 10px 30px 10px
+
+.form__field
+	margin-top: 20px
+	margin-bottom: 5px
+	color: #fff
+
+.form__input
+	border: none
+	border-radius: 10px
+	width: 80%
+	padding: 5px 10px
+
+.form__submit
+	border: none
+	background-color: #fff
+	margin-top: 20px
+	border-radius: 10px
+	padding: 10px 30px
+	font-weight: bold
+
+.footer-row
+	background-color: $accent
+	padding: 3% 0% 2% 3%
+	.col-sm-3
+		text-align: center
+		padding: 0px
+		margin-bottom: 10px
+
+.phone
+	img
+		max-height: 20px
+
+.hidden
+	display: none
+.visible
+	display: block
+	text-align: center
